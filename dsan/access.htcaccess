@@ -1,0 +1,6 @@
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+AddType video/mp4 .mp4
+AddType video/mp4 .m4v
+AddType video/mp4 .m4p
+AddType video/webm .webm

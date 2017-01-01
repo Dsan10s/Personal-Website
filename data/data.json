@@ -1,0 +1,86 @@
+var data = {
+  "section1": [
+    {
+      "title": "TigerText Internship", 
+      "link": "http://www.tigertext.com/", 
+      "href": "html/web/tt/TTContent.html", 
+      "imgArray": [{"src": "pictures/web/tt/TigerTextTile.png", "style": {"height": "90%", "width": "90%"}}]
+    }, 
+    {
+      "title": "DIRECTV Internship", 
+      "link": "www.directv.com", 
+      "href": "html/web/dtv/DTVContent.html", 
+      "imgArray": [{"src": "pictures/web/dtv/DIRECTVTile.png", "style": {"height": "auto", "width": "100%"}}]
+    },
+    {"title": "ClearSlide Internship",
+      "link" : "http://www.clearslide.com/",
+      "href": "html/web/clearslide/CSContent.html",
+      "imgArray": [{"src": "pictures/web/clearslide/ClearSlide_1.jpeg", "style": "{}"/*"{height: "auto", width: "90%"}"*/}]
+    },
+    {"title": "Nu Delta Website",
+      "link" : "http://nudelta.mit.edu/",
+      "href": "html/web/nudelta/NDContent.html",
+      "imgArray": [{"src": "pictures/web/nd/NDWebTile.png", "style": "{}"}]
+    },
+    {"title": "Video Annotation Tool",
+      "link" : "http://web.mit.edu/6.mitx/www/videoAnnotation/videoAnnotation.html",
+      "href": "html/web/va/VAContent.html",
+      "imgArray": [{"src": "pictures/web/va/VATile.png", "style": "{}"}]
+    },
+    {"title": "International Phonetic Alphabet Tool",
+      "link" : "http://web.mit.edu/6.mitx/www/24.900%20IPA/IPAapp.html",
+      "href": "html/web/ipa/IPAContent.html",
+      "imgArray": [{"src": "pictures/web/ipa/IPATile.png", "style": "{}"}]
+    }, 
+    {"title": "RunThisTown",
+      "link" : "https://github.com/mrcalvinli/RunThisTown",
+      "href": "html/web/runthistown/RTTContent.html",
+      "imgArray": [{"src": "pictures/web/runthistown/RunThisTownLogoSQ.png", "style": "{}"}]
+    }// ,
+    // {"title": "Fritter",
+    //   "link" : "http://fritter-dsan.rhcloud.com/",
+    //   "href": "html/web/fritter/fritterContent.html",
+    //   "imgArray": [{"src": "pictures/web/fritter/fritter.png", "style": "{}"/*"{height: "auto", width: "90%"}"*/}]
+    // },
+    // {"title": "Game of Life",
+    //   "link" : "http://web.mit.edu/dsan/www/gol/phase2.html",
+    //   "href": "html/web/gol/golContent.html",
+    //   "imgArray": [{"src": "pictures/web/gol/gol4.JPG", "style": "{}"/*"{height: "auto", width: "90%"}"*/}]
+    // }, 
+    // {"title": "GhostMaze",
+    //   "link" : "http://rswang.scripts.mit.edu/ghostmaze.html",
+    //   "href": "html/web/ghostmaze/ghostmazeContent.html",
+    //   "imgArray": [{"src": "pictures/web/ghostmaze/ghost.png", "style": "{}"/*"{height: "auto", width: "90%"}"*/}]
+    // }, 
+    // {"title": "Sparkly Redemption", 
+    //  "link" : "http://web.mit.edu/~rgomes/www/sparklies/", 
+    //  "href": "html/web/sparkly/sparklyContent.html", 
+    //  "imgArray": [{"src": "pictures/web/sparkly/sparkly.JPG", "style": "{}"}]
+    // }
+  ], 
+  "section2": [
+    {"title": "Laundry Boss",
+      "description": "For 6.570, MIT's Mobile App Development Competition, I was asked by a group of my friends to make the logo for the app they were submitting, which was an app that made doing laundry within MIT much easier.",
+      "imgArray": [{"src": "pictures/graphic-design/Laundry Boss.png", "style": "{}"}]
+    },
+    {"title": "Nu Delta Shirts",
+      "description": "I created the main design for general purpose shirts of my fraternity.",
+      "imgArray": [{"src": "pictures/graphic-design/NDLogoSQ.png", "style": "{}"},
+        {"src": "pictures/graphic-design/NDLogoShirt.jpg", "style": "{}"}]
+    },
+    {"title": "St. Patrick's Day Cover",
+      "description": "For St. Patrick's day, my fraternity needed a party poster to publicize the event.  The final poster ended up using my design, which includes the centerpiece of a pheonix fused with a clover.  The fraternity symbol is the pheonix, and you can see that the way the phoenix is displaying its wings completes the top leaf of the clover.",
+      "imgArray": [{"src": "pictures/graphic-design/StPattysDaySQ.png", "style": "{}"}]
+    },
+    {"title": "FadMatics",
+      "description": "",
+      "imgArray": [{"src": "pictures/graphic-design/FadMatics.png", "style": "{}"}]
+    },
+    {"title": "RunThisTown Logo",
+      "description": "For 6.470, MIT's Website Programming Competition, I worked in a group of 3 to develop a running app (Take a look at the Web Projects section). Above you can see the logo that I designed for the app, where a running man is embedded in the letter R.",
+      "imgArray": [{"src": "pictures/graphic-design/RunThisTownLogoSQ.png", "style": "{}"},
+        {"src": "pictures/graphic-design/RunThisTownLogo1OnBlack.png", "style": "{}"}]
+    }
+  ], 
+  "section3": []
+}

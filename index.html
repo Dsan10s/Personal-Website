@@ -1,0 +1,223 @@
+<html ng-app="personalWebsite">
+  <head>
+    <title>Daniel Sanchez</title>
+    <!-- Local Versions of files for developing without internet -->
+    <!-- REMOVE THESE BEFORE PUBLISHING -->
+    <script type="text/javascript" src="external/angular.min.js"></script>
+    <script type="text/javascript" src="external/angular-route.min.js"></script>
+    <script type="text/javascript" src="external/jQuery.js"></script>
+
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <!-- Angular -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script type="text/javascript" src="external/dsanBootstrap.js"></script>
+
+    <!-- My JS -->
+    <script type="text/javascript" src="data/data.json"></script>
+    <script type="text/javascript" src="PersonalWebsiteController.js"></script>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="external/dsanBootstrap.css">
+
+    <!-- My css -->
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  
+  <body ng-controller="personalWebsiteCtrl">
+    <script type="text/javascript" src="pwScript.js"></script>
+    <div id="videoOverlay">
+      <h1 id="videoOverlayTextTop" 
+          class="videoOverlayText" >Hi, my name is</h1>
+      <div id="videoOverlayTextBottomDiv">
+        <h1 id="videoOverlayTextBottom" class="videoOverlayText">Learn more about me below</h1>
+        <div id="chevCont"><img id="chevDown" src="pictures/ChevronDown.png" /></div>
+      </div>
+    </div>
+
+    <div id="videoContainer">
+      <video id="videoBackground" autobuffer preload="auto" muted="muted" volume="0" onerror="failed(event)" poster="pictures/MyNameWBG.JPG">
+        <source src="videos/MyNameWebsite2.mp4.mp4">
+        <source src="videos/MyNameWebsite2.webmhd.webm">
+      </video>
+    </div>
+
+    <div id="aboutMe">
+
+      <div id="nav">
+        <div id="navContentCont">
+          <div id="navContent">
+
+            <img style="height: 100%; float: left;" src="pictures/ProfPic.jpg">
+            
+            <div class="activeItem navItem navTab" 
+                 ng-click="viewModel.changeProjectsDisplayed(viewModel.section1)">
+              <h1 class="navTitle">Software</h1>
+            </div>
+            
+            <div class="navItem navTab" 
+                 ng-click="viewModel.changeProjectsDisplayed(viewModel.section2)">
+              <h1 class="navTitle">Graphic Design</h1>
+            </div>
+            
+            <div class="navItem navTab" 
+                 ng-click="viewModel.changeProjectsDisplayed(viewModel.section3)">
+              <h1 class="navTitle">Photography</h1>
+            </div>
+            
+            <a href="files/Resume.pdf">
+              <div class="navItem" id="resume">
+                <img style="height: 100%" src="pictures/resume-icon.jpg">
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/pub/daniel-sanchez/74/62b/59b">
+              <div class="navItem" id="linkedIn">
+                <img style="height: 100%" src="pictures/li.png">
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="lowerSection" class="container">
+
+        <!-- Website Description -->
+        <div>
+          <p>Hello, and welcome to my personal webpage!  Below you will find a collection of projects I have done over the years.  You can select different categories of projects using the navbar above.  </p>
+        
+          <p>If you would like to contact me, feel free to reach out to me by email at dsan@mit.edu.</p>
+        </div>
+
+        <table style="width: 100%" ng-if="viewModel.projectsDisplayed.length == 0">
+          <tr>
+            <td>
+              <div style="height: 50%; border-bottom: 1px solid #aaa">
+            </td>
+            <td style="width: 144px">
+              <div style="display: inline-block;
+                          text-align: center">
+                <i style="padding: 10px;">Coming Soon...</i>
+              </div>
+            </td>
+            <td>
+              <div style="height: 50%; border-bottom: 1px solid #aaa">
+            </td>
+          </tr>
+        </table>
+
+        <!-- Tiles -->
+        <div class="outerTile">
+          <div class="tile" 
+               ng-repeat="project in viewModel.projectsDisplayed" 
+               ng-click='viewModel.setCurrentProject(viewModel.projectsDisplayed.indexOf(project));' 
+               data-toggle="modal" 
+               data-target="#projectModal" 
+               tile-img-repeat-directive>
+
+            <div class="tileCont">
+              <div class="tileTitle">
+                <div class="tileTitleTextCont">
+                  <h3 class="tileTitleText">{{project.title}}</h3>
+                </div>
+              </div>
+              <img class="tileImg" 
+                   ng-src="{{project.imgArray[0].src}}" 
+                   ng-style="{{project.imgArray[0].style}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" 
+         id="projectModal" 
+         tabindex="-1" 
+         role="dialog" 
+         aria-labelledby="myModalLabel" 
+         aria-hidden="true">
+      <div class="modal-dialog">
+
+        <!-- Web Projects Content -->
+        <div class="modal-content" 
+             ng-if="viewModel.projectsDisplayed==viewModel.section1">
+
+          <div class="modal-header">
+            <button type="button" 
+                    class="close" 
+                    data-dismiss="modal" 
+                    aria-hidden="true">
+              &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+              <a ng-href="{{viewModel.currentProject.link}}">
+                {{viewModel.currentProject.title}}
+              </a>
+            </h4>
+          </div>
+
+          <div class="modal-body">
+            <div class="arrowCont">
+
+              <div class="arrow leftArrow">
+                <img class="modalChev" src="pictures/ChevLeft.png">
+              </div>
+
+              <div class="arrow rightArrow">
+                <img class="modalChev" src="pictures/ChevRight.png">
+              </div>
+
+            </div>
+            <div id="modalBodyContent"></div>
+          </div>
+
+        
+        </div>
+
+        <!-- Graphic Design Content -->
+        <div class="modal-content" 
+             ng-if="viewModel.projectsDisplayed==viewModel.section2">
+
+          <div class="modal-header">
+            <button type="button" 
+                    class="close" 
+                    data-dismiss="modal" 
+                    aria-hidden="true">
+              &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+              {{viewModel.currentProject.title}}
+            </h4>
+          </div>
+
+          <div class="modal-body">
+            <div class="arrowCont">
+              <div class="arrow leftArrow">
+                <img class="modalChev" src="pictures/ChevLeft.png">
+              </div>
+              <div class="arrow rightArrow">
+                <img class="modalChev" src="pictures/ChevRight.png">
+              </div>
+            </div>
+            <img ng-repeat='image in viewModel.currentProject.imgArray' 
+                 class="modalImg" 
+                 ng-src='{{image.src}}' 
+                 modal-img-repeat-directive>
+          </div>
+
+          <div class="modal-footer">
+            <p>{{viewModel.currentProject.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<i>
+    All MITx tools were developed as prototypes, and were not meant to be final products.  Many of the MITx prototypes later had their development continued and finished by other developers, after handing off the project to them.
+</i>
+
+<p>
+    One of the learning tools I made with MITx, this app was meant to be used with the Linguistics course to give users an easier way of learning the international phonetic alphabet.  There are three main parts to the app: the converter, the table, and the quiz.  If you'd like to see the app itself, click the title (or <a href="http://web.mit.edu/6.mitx/www/24.900%20IPA/IPAapp.html">here</a>).  Below you'll find the key features of the app.  For a more detailed description, visit the link, and click the 'About' section.
+</p>
+
+<div class = "tabbable">
+    <ul class = "nav nav-tabs">
+        <li class = "active"><a href = "#modalTab1" data-toggle = "tab">IPA Converter</a></li>
+        <li><a href = "#modalTab2" data-toggle = "tab">Quiz</a></li>
+        <li><a href = "#modalTab3" data-toggle = "tab">IPA Charts</a></li>
+    </ul>
+    <div class = "tab-content" style="padding: 10px;">
+
+        <div class = "tab-pane active" id = "modalTab1">
+            <p>Users begin by inputing a word into the input box above the submit button.</p>
+
+            <img class = "modalImg" src = "pictures/web/ipa/inputBox.JPG"/>
+
+            <p>After submitting, the converter will display the input word and it's IPA spelling</p>
+
+            <img class = "modalImg" src = "pictures/web/ipa/Pronounciation.JPG"/>
+
+            <p>Users can now click on a symbol in the output to hear it's pronounciation.  When they hover over a symbol, the table section automatically switches to the table containing that symbol, highlights it in the table, and displays popovers outlining how to pronounce the symbol. </p>
+            <div>
+                <img class = "modalImg" style = "width: 46%; display: inline-block" src = "pictures/web/ipa/ProHover.JPG"/>
+                <span class = "glyphicon glyphicon-arrow-right"></span>
+                <img class = "modalImg" src = "pictures/web/ipa/ProTableHover.JPG" style = "width: 46%; display: inline-block"/>
+            </div>
+            <p>Users can also click a button to hear a pronounciation of the whole word.</p>
+        </div>
+
+        <div class = "tab-pane" id = "modalTab2">
+            <p>The IPA quiz displays an IPA symbol, and asks the user to input a word containing that symbol.</p>
+
+            <img class = "modalImg" src = "pictures/web/ipa/quizSound.JPG"/>
+
+            <p>Users can play the sound of the symbol as a hint, or move on to a new randomly selected symbol</p>
+
+            <img class = "modalImg" src = "pictures/web/ipa/quizInput.JPG"/>
+
+        </div>
+
+        <div class = "tab-pane" id = "modalTab3">
+
+            <p>There are 3 tables that users can use to learn the IPA in an organized way.</p>
+
+            <h4> All the tables share these functionalities:</h4>
+                <ul>
+                    <li>If you click on a symbol in the table, you can hear it's pronounciation</li>
+                    <li>Hovering over the labels in any chart will give you a description of what that label means</li>
+
+                </ul>
+            <div class = "tabbable">
+                <ul class = "nav nav-pills">
+                    <li class = "active">
+                        <a href = "#pulmonicTab" data-toggle = "tab">Pulmonic Consanants</a>
+                    </li>
+                    <li>
+                        <a href = "#nonPulmonicTab" data-toggle = "tab">Non-Pulmonic Consanants</a>
+                    </li>
+                    <li>
+                        <a href = "#vowelsTab" data-toggle = "tab">Vowels</a>
+                    </li>
+                </ul>
+                <div class = "tab-content" style="padding: 10px">
+                    <div class = "tab-pane active" id = "pulmonicTab">
+                        <img class = "modalImg" style = "width: 95%" src = "pictures/web/ipa/pulmonicTable.JPG"/>
+                        <p>Clicking a symbol plays audio of the symbol being pronounced, and switches the quiz to that symbol, allowing users to test themselves on specific symbols.</p>
+                        <div style="display:block; text-align: center">
+                            <img class = "modalImg" style="display: inline-block" src = "pictures/web/ipa/tableClick.JPG"/>
+                            <span class = "glyphicon glyphicon-arrow-right"></span>
+                            <img class = "modalImg" style="display: inline-block" src = "pictures/web/ipa/clickToQuiz.JPG"/>
+                        </div>
+                    </div>
+                    <div class = "tab-pane" id = "nonPulmonicTab">
+                        <img class = "modalImg" style = "width: 95%" src = "pictures/web/ipa/nonPulmonicTable.JPG"/>
+                        <p>All the symbols here are not included in the English language, so clicking on a symbol does not change the quiz symbol</p>
+                    </div>
+                    <div class = "tab-pane" id = "vowelsTab">
+                        <img class = "modalImg" style = "width: 95%" src = "pictures/web/ipa/vowelTable.JPG"/>
+                        <p>The way the chart is displayed is standard for IPA tables, but is a bit confusing at first</p>
+
+                        <p>There are 3 main columns: "Front", "Central", and "Back".  Throughout the table you will see dots.  The picture below shows how they align with the columns, as the columns do slant.</p>
+
+                        <img  class = "modalImg" style = "width: 95%" src = "pictures/web/ipa/VowelTableLines.JPG"/> 
+
+                        <p>Next to every dot there will either be 1 or 2 symbols.  The symbol to the right is rounded, meaning you physically round your lips as you are pronouncing the symbol.  The symbol to the left is unrounded, so you can voice it without doing anything fancy.</p>
+
+                        <p>Like the pulmonics table, clicking a symbol changes the quiz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

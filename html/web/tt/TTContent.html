@@ -1,0 +1,56 @@
+<p>TigerText is an enterprise messaging application mainly focused towards the healthcare space.  In hospitals, in order to send around sensitive data such as patient information, all of this is currently done by fax, because most electronic means can expose this data if the messages are not encrypted properly.  Hospitals must make sure that whatever means they use to pass this data complies with various government acts, such as HIPPA (The Health and Insurance Portability and Accountability Act).  TigerText sends messages in such a way that complies with these regulations, and allows internal communications within a hospital to happen much more efficiently.  This, in turn, leads to more patients being treated in a given period of time, in addition to decreased readmission of these patients.</p>
+
+<p>My role at TigerText was as a software developer on the web team, where we worked on the web console portion of the application.</p>
+
+<ul>
+  <li><b>Languages/Technologies used: </b>
+    <ul>
+      <li><i>Front End: </i>
+        <ul>
+          <li>HTML, SASS, JavaScript, jQuery</li>
+          <li>Bootstrap</li>
+          <li>Knockout.js</li>
+          <li>Angular.js</li>
+        </ul>
+      </li>
+      <li><i>Front End-Back End Communication: </i>
+        <ul>
+          <li>AJAX</li>
+          <li>Form submission</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b>My main contributions: </b>
+    <ul>
+      <li><i>Inline images</i>
+        <ul>
+    			<li>Inline images is a feature that exists in many other messaging applications.  In order for TigerText to stay competitive with these messaging apps and give the user the best experience possible, inline images was a highly desired feature for implementation.</li>
+    			<li>I implemented images to appear within a chat bubble in two scenarios: when the user attaches an image file, and when the user inputs a link to an image.  In both cases, it saves the user one step that they would've needed to have taken in order to actually view the image.</li>
+        </ul>
+      </li>
+      <li><i>Google Calendar Hack</i>
+      	<ul>
+      		<li>During the internship, there was an intern hackathon in which the interns were separated into teams and asked to hack something for TigerText that doesn't currently exist, but could potentially be useful to users.  For my hack, my partner and I worked on integrating Google Calendar into the application; him working on the Android side and me creating the web component.</li>
+      		<li>The main inspiration was to make it far easier for two users to set up a meeting with each other.  Everybody within the company already has access to see each other's Google Calendar, so rather than switching to Google Calendar and searching up the user to view their schedule, you can simply see both users' schedules overlayed in a view located next to the chat window.</li>
+      		<li>Every team was then asked to present their hack to the company, after which the judges would decide a winner.  As it turns out, the judges declared my team's hack as the winner!</li>
+      		<li>In addition, the web team started making a plan as to what further steps would need to be taken to implement the hack into production code.</li>
+      	</ul>
+      </li>
+      <li><i>Web Registration 2.0</i>
+      	<ul>
+      		<li>The current flow to register for TigerText on the web was not the most user friendly experience.</li>
+      		<li>Designs already existed for a new web registration flow.  This flow was both more aesthetically pleasing, and a smoother overall experience for the user in terms of getting their account fully set up.</li>
+      		<li>My job was to implement this flow as a separate AngularJS app that could be used as a template for use in production.</li>
+      	</ul>
+      </li>
+      <li><i>JavaScript SDK Redirect</i>
+      	<ul>
+      		<li>One of the resources loaded on the web console is TigerText's own JavaScript SDK.  However, the existing method of retrieving this resource was extremely convoluted and inefficient.  This was because we wanted to retrieve our resources from AWS S3, but some resources were still being stored on CloudFront.  Currently on Cloudfront was the SDK, in addition to redirect code for the SDK.  However, the web console was looking at an S3 bucket for the SDK.  So the whole flow to retrieve the resource was that the web console would first fetch the redirect code from CloudFront, then attempt to get the SDK from S3.  At this point, the redirect code would be used to go back to CloudFront instead of S3 in order get the SDK where it was actually stored.  </li>
+      		<li>Until the SDK could simply be moved to S3, we needed a way to retrieve the resource much faster.  The first step I took to accomplish this was to replicate the logic of the redirect code on CloudFront directly in the S3 bucket.</li>
+      		<li>I wrote a JavaScript file that could easily change the information stored on the S3 bucket.  This would allow production code an easy way to make sure that the production bucket had the correct redirect logic, and also provided an easy way to simply retrieve the SDK from the bucket rather than redirecting, once the SDK was stored in the bucket</li>
+      	</ul>
+      </li>
+    </ul>
+  </li>
+</ul>

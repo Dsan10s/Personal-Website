@@ -1,0 +1,236 @@
+@font-face{ 
+	font-family: 'AileronUltraLight';
+	src: url('fonts/AileronUltraLight/aileron-ultralight-webfont.eot');
+	src: url('fonts/AileronUltraLight/aileron-ultralight-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/AileronUltraLight/aileron-ultralight-webfont.woff') format('woff'),
+	     url('fonts/AileronUltraLight/aileron-ultralight-webfont.ttf') format('truetype'),
+	     url('fonts/AileronUltraLight/aileron-ultralight-webfont.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'AileronThin';
+	src: url('fonts/AileronThin/aileron-thin-webfont.eot');
+	src: url('fonts/AileronThin/aileron-thin-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/AileronThin/aileron-thin-webfont.woff') format('woff'),
+	     url('fonts/AileronThin/aileron-thin-webfont.ttf') format('truetype'),
+	     url('fonts/AileronThin/aileron-thin-webfont.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'BebasNeueBold';
+	src: url('fonts/BebasNeueBold/bebasneue_bold-webfont.eot');
+	src: url('fonts/BebasNeueBold/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/BebasNeueBold/bebasneue_bold-webfont.woff') format('woff'),
+	     url('fonts/BebasNeueBold/bebasneue_bold-webfont.ttf') format('truetype'),
+	     url('fonts/BebasNeueBold/bebasneue_bold-webfont.svg#webfont') format('svg');
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.5) url("pictures/CSView.png") no-repeat center center fixed;
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+h1, h2, h3 {
+	font-family: AileronUltraLight;
+	
+}
+
+p {
+	font-size: 20px;
+	font-family: AileronThin;
+}
+
+#videoOverlay {
+	width: 100%;
+	margin-top: -5%;
+	/*max-height: 100%;*/
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+#videoOverlayTextTop {
+	opacity: 0; 
+	margin-top: 1.2em;
+}
+.videoOverlayText {
+	font-size: 5em; 
+	text-align: center; 
+	color: white; 
+	font-weight: normal;
+	/*opacity: 0;*/
+}
+#videoOverlayTextBottomDiv {
+	position: absolute; 
+	text-align: center; 
+	width: 100%; 
+	bottom: 0; 
+	opacity: 0
+}
+#videoOverlayTextBottom {
+	margin-bottom: 10px;
+}
+#chevDown {
+	cursor: pointer;
+}
+#videoContainer {
+	width: 100%;
+	margin-top: -5%;
+	/*max-height: 100%;*/
+	overflow: hidden;
+	/*position: absolute;*/
+}
+#videoBackground {
+	width: 100%;
+	height: auto;
+}
+
+#nav {
+	min-width: 1170px;
+	background-color: black;
+	width: 100%;
+	height: 100px;
+}
+#navContentCont {
+	display: table;
+	margin: 0 auto;
+}
+#navContent {
+	height: 100px;
+}
+.navItem {
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	opacity: 0.7;
+	cursor: pointer;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+.navItem:hover {
+	opacity: 1;
+}
+.navTab {
+	border-bottom: 10px solid white;
+}
+.activeItem {
+	opacity: 1;
+	border-bottom: 10px solid #d9534f;
+}
+.navTitle {
+	font-family: BebasNeueBold;
+	margin: 30px;
+	font-size: 40px;
+	color: white;
+}
+
+#aboutMe {
+	width: 100%;
+	overflow-y: hidden;
+}
+#lowerSection {
+	padding-top: 20px;	
+	min-height: calc(100% - 100px);
+	min-width: 1170px; 
+	background: rgba(247, 247, 247, 0.8);
+}
+.outerTile {
+	padding: 10px;
+}
+.tile {
+	display: inline-block;
+	margin: 5px;
+	position: relative;
+}
+.tileCont {
+	overflow: hidden;
+	background-color: white;
+	cursor: pointer;
+	position: absolute;
+	top: -9999px;
+	bottom: -9999px;
+	left: -9999px;
+	right: -9999px;
+	margin: auto;
+	-webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 1);
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 1);
+	-webkit-transition: -webkit-box-shadow 0.3s, width 0.3s, height 0.3s;
+	transition: box-shadow 0.3s, width 0.3s, height 0.3s;
+}
+.tileTitle {
+	z-index: 1;
+	background: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)); /* Standard syntax */
+	height: 50%;
+	width: 100%;
+	position: absolute;
+	bottom: -50%;
+	color: white;
+	text-align: center;
+	-webkit-transition: bottom 0.3s;
+	transition: bottom 0.3s;
+}
+.tileTitleTextCont {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+}
+.tileImg {
+	height: 100%;
+	position: absolute;
+	top: -9999px;
+	bottom: -9999px;
+	left: -9999px;
+	right: -9999px;
+	margin: auto;
+}
+
+.arrowCont {
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: calc(100% - 40px);
+	pointer-events: none;
+}
+.arrow {
+	height: 100%;
+	width: 50px;
+	pointer-events: all;
+	cursor: pointer;
+	opacity: 0.5;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	position: relative;
+}
+.arrow:hover {
+	opacity: 1;
+}
+.modalChev {
+	width: 50px;
+	height: 50px;
+	top: calc(50% - 80px);
+	font-size: 50px;
+	position: absolute;
+}
+.leftArrow {float: left;}
+.rightArrow{float: right;}
+.modalImg {
+	/*height: calc(100% - 30px); */
+	display: block; 
+	margin: 0 auto 30 auto;
+	-webkit-box-shadow: 0 2px 26px rgba(0, 0, 0, 1), 0 0 0 1px rgba(0, 0, 0, 0);
+	box-shadow: 0 2px 26px rgba(0, 0, 0, 1), 0 0 0 1px rgba(0, 0, 0, 0);
+}
+.modal-title {
+	font-size: 26pt;
+	font-family: BebasNeueBold;
+}
