@@ -158,9 +158,12 @@
               &times;
             </button>
             <h4 class="modal-title" id="myModalLabel">
-              <a ng-href="{{viewModel.currentProject.link}}">
+              <a ng-if="viewModel.currentProject.link" ng-href="{{viewModel.currentProject.link}}">
                 {{viewModel.currentProject.title}}
               </a>
+              <span ng-if="!viewModel.currentProject.link">
+                {{viewModel.currentProject.title}}
+              </span>
             </h4>
           </div>
 

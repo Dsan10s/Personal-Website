@@ -3,7 +3,7 @@ var data = {
 		{
 			"title": "Google Internship",
 			"href": "html/web/google/GoogleContent.html",
-			"imgArray": [{"src": "pictures/web/google/GoogleTile.png", "style": {}}]
+			"imgArray": [{"src": "pictures/web/google/GoogleTile.png", "style": {"height": "90%", "width": "90%"}}]
 		},
     {
       "title": "TigerText Internship", 
