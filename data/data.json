@@ -1,5 +1,10 @@
 var data = {
   "section1": [
+		{
+			"title": "Google Internship",
+			"href": "html/web/google/GoogleContent.html",
+			"imgArray": [{"src": "pictures/web/google/GoogleTile.png", "style": {}}]
+		},
     {
       "title": "TigerText Internship", 
       "link": "http://www.tigertext.com/", 
