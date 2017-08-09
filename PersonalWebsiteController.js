@@ -177,6 +177,7 @@ var PersonalWebsiteController = function() {
 
     // Tooltips
     $("#linkedIn").tooltip({"title": "LinkedIn", "placement": "bottom"});
+		$("#github").tooltip({"title": "Github", "placement": "bottom"});
     $("#resume").tooltip({"title": "Resume", "placement": "bottom"});
   }
 
