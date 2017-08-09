@@ -52,43 +52,42 @@
 
       <div id="nav">
         <div id="navContentCont">
-          <div id="navContent">
+          <div id="navContent" class="container">
 
-            <img style="height: 100%; float: left;" src="https://avatars2.githubusercontent.com/u/3622732"
-						onerror="javascript:this.src='pictures/ProfPic.jpg'">
-            
-            <div class="activeItem navItem navTab" 
-                 ng-click="viewModel.changeProjectsDisplayed(viewModel.section1)">
-              <h1 class="navTitle">Software</h1>
-            </div>
-            
-            <div class="navItem navTab" 
-                 ng-click="viewModel.changeProjectsDisplayed(viewModel.section2)">
-              <h1 class="navTitle">Graphic Design</h1>
-            </div>
-            
-            <div class="navItem navTab" 
-                 ng-click="viewModel.changeProjectsDisplayed(viewModel.section3)">
-              <h1 class="navTitle">Photography</h1>
-            </div>
-            
-            <a href="files/Resume.pdf">
-              <div class="navItem" id="resume">
-                <img style="height: 100%" src="pictures/resume-icon.jpg">
-              </div>
-            </a>
-
-						<a href="https://www.github.com/Dsan10s">
-							<div class="navItem" id="github">
-								<img style="height: 100%" src="pictures/github-icon.png">
+						<div class="navLeft">
+							<img style="height: 100%; float: left;" src="https://avatars2.githubusercontent.com/u/3622732"
+							onerror="javascript:this.src='pictures/ProfPic.jpg'">
+							
+							<div class="activeItem navItem navTab" 
+									 ng-click="viewModel.changeProjectsDisplayed(viewModel.section1)">
+								<h1 class="navTitle">Software</h1>
 							</div>
-						</a>
+							
+							<div class="navItem navTab" 
+									 ng-click="viewModel.changeProjectsDisplayed(viewModel.section2)">
+								<h1 class="navTitle">Graphic Design</h1>
+							</div>
+						</div>
+            
+						<div class="navRight">
+							<a href="files/Resume.pdf">
+								<div class="navItem" id="resume">
+									<img style="height: 100%" src="pictures/resume-icon.jpg">
+								</div>
+							</a>
 
-            <a href="https://www.linkedin.com/pub/daniel-sanchez/74/62b/59b">
-              <div class="navItem" id="linkedIn">
-                <img style="height: 100%" src="pictures/li.png">
-              </div>
-            </a>
+							<a href="https://www.github.com/Dsan10s">
+								<div class="navItem" id="github">
+									<img style="height: 100%" src="pictures/github-icon.png">
+								</div>
+							</a>
+
+							<a href="https://www.linkedin.com/pub/daniel-sanchez/74/62b/59b">
+								<div class="navItem" id="linkedIn">
+									<img style="height: 100%" src="pictures/li.png">
+								</div>
+							</a>
+						</div>
 
           </div>
         </div>
